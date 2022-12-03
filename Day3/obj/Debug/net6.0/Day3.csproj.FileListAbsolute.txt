@@ -1,0 +1,15 @@
+/Users/mikebucher/dev/hackfest/AdventOfCode2022/Day3/bin/Debug/net6.0/Day3
+/Users/mikebucher/dev/hackfest/AdventOfCode2022/Day3/bin/Debug/net6.0/Day3.deps.json
+/Users/mikebucher/dev/hackfest/AdventOfCode2022/Day3/bin/Debug/net6.0/Day3.runtimeconfig.json
+/Users/mikebucher/dev/hackfest/AdventOfCode2022/Day3/bin/Debug/net6.0/Day3.dll
+/Users/mikebucher/dev/hackfest/AdventOfCode2022/Day3/bin/Debug/net6.0/Day3.pdb
+/Users/mikebucher/dev/hackfest/AdventOfCode2022/Day3/obj/Debug/net6.0/Day3.csproj.AssemblyReference.cache
+/Users/mikebucher/dev/hackfest/AdventOfCode2022/Day3/obj/Debug/net6.0/Day3.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mikebucher/dev/hackfest/AdventOfCode2022/Day3/obj/Debug/net6.0/Day3.AssemblyInfoInputs.cache
+/Users/mikebucher/dev/hackfest/AdventOfCode2022/Day3/obj/Debug/net6.0/Day3.AssemblyInfo.cs
+/Users/mikebucher/dev/hackfest/AdventOfCode2022/Day3/obj/Debug/net6.0/Day3.csproj.CoreCompileInputs.cache
+/Users/mikebucher/dev/hackfest/AdventOfCode2022/Day3/obj/Debug/net6.0/Day3.dll
+/Users/mikebucher/dev/hackfest/AdventOfCode2022/Day3/obj/Debug/net6.0/refint/Day3.dll
+/Users/mikebucher/dev/hackfest/AdventOfCode2022/Day3/obj/Debug/net6.0/Day3.pdb
+/Users/mikebucher/dev/hackfest/AdventOfCode2022/Day3/obj/Debug/net6.0/Day3.genruntimeconfig.cache
+/Users/mikebucher/dev/hackfest/AdventOfCode2022/Day3/obj/Debug/net6.0/ref/Day3.dll
