@@ -23,11 +23,11 @@ for (var i = 10; i < lines.Length; i++)
     for (var j = stack; j > 0; j--)
     {
         var indexToBeMoved = stackArray[from - 1].Length - j;
-        var toBeMoved = stackArray[from-1][indexToBeMoved];
-        stackArray[to-1] = stackArray[to-1].Append(toBeMoved).ToArray();
+        var toBeMoved = stackArray[from - 1][indexToBeMoved];
+        stackArray[to-1] = stackArray[to - 1].Append(toBeMoved).ToArray();
     }
 
-    stackArray[from-1] = stackArray[from-1].SkipLast(stack).ToArray();
+    stackArray[from - 1] = stackArray[from - 1].SkipLast(stack).ToArray();
 }
 
 Console.WriteLine($"{string.Join("", stackArray.Select(x => x.Last()))}");
