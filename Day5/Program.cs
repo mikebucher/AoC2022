@@ -1,6 +1,6 @@
-﻿string[] lines = File.ReadAllLines(@"../../../input.txt");
+﻿var lines = File.ReadAllLines(@"../../../input.txt");
 
-char[][] stackArray = new char[9][];
+var stackArray = new char[9][];
 
 stackArray[0] = new[] {'N', 'C', 'R', 'T', 'M', 'Z', 'P'};
 stackArray[1] = new[] {'D', 'N', 'T', 'S', 'B', 'Z'};
@@ -12,7 +12,7 @@ stackArray[6] = new[] {'W', 'D', 'Z', 'R', 'C', 'G', 'M'};
 stackArray[7] = new[] {'S', 'J', 'F', 'L', 'H', 'W', 'Z', 'Q'};
 stackArray[8] = new[] {'S', 'Q', 'P', 'W', 'N'};
 
-for (int i = 10; i < lines.Length; i++)
+for (var i = 10; i < lines.Length; i++)
 {
     var split = lines[i].Split(' ');
 
@@ -26,4 +26,4 @@ for (int i = 10; i < lines.Length; i++)
 
     stackArray[ints[1]-1] = stackArray[ints[1]-1].SkipLast(ints[0]).ToArray();
 }
-Console.WriteLine($"{stackArray[0][stackArray[0].Length-1]}{stackArray[1][stackArray[1].Length-1]}{stackArray[2][stackArray[2].Length-1]}{stackArray[3][stackArray[3].Length-1]}{stackArray[4][stackArray[4].Length-1]}{stackArray[5][stackArray[5].Length-1]}{stackArray[6][stackArray[6].Length-1]}{stackArray[7][stackArray[7].Length-1]}{stackArray[8][stackArray[8].Length-1]}");
+Console.WriteLine($"{stackArray[0].Last()}{stackArray[1].Last()}{stackArray[2].Last()}{stackArray[3].Last()}{stackArray[4].Last()}{stackArray[5].Last()}{stackArray[6].Last()}{stackArray[7].Last()}{stackArray[8].Last()}");
