@@ -28,4 +28,5 @@ for (var i = 10; i < lines.Length; i++)
 
     stackArray[from-1] = stackArray[from-1].SkipLast(stack).ToArray();
 }
-Console.WriteLine($"{stackArray[0].Last()}{stackArray[1].Last()}{stackArray[2].Last()}{stackArray[3].Last()}{stackArray[4].Last()}{stackArray[5].Last()}{stackArray[6].Last()}{stackArray[7].Last()}{stackArray[8].Last()}");
+
+Console.WriteLine($"{string.Join("", stackArray.Select(x => x.Last()))}");
