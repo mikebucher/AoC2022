@@ -1,5 +1,4 @@
 ﻿string[] lines = File.ReadAllLines(@"../../../input.txt");
-string result;
 
 char[][] stackArray = new char[9][];
 
