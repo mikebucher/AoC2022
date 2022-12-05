@@ -16,14 +16,16 @@ for (var i = 10; i < lines.Length; i++)
 {
     var split = lines[i].Split(' ');
 
-    int[] ints = { Convert.ToInt32(split[1]), Convert.ToInt32(split[3]), Convert.ToInt32(split[5]) };
+    var stack = Convert.ToInt32(split[1]);
+    var from = Convert.ToInt32(split[3]);
+    var to = Convert.ToInt32(split[5]) ;
 
-    for (var j = ints[0]; j > 0; j--)
+    for (var j = stack; j > 0; j--)
     {
-        var toBeMoved = stackArray[ints[1]-1][stackArray[ints[1]-1].Length-j];
-        stackArray[ints[2]-1] = stackArray[ints[2]-1].Append(toBeMoved).ToArray();
+        var toBeMoved = stackArray[from-1][stackArray[from-1].Length-j];
+        stackArray[to-1] = stackArray[to-1].Append(toBeMoved).ToArray();
     }
 
-    stackArray[ints[1]-1] = stackArray[ints[1]-1].SkipLast(ints[0]).ToArray();
+    stackArray[from-1] = stackArray[from-1].SkipLast(stack).ToArray();
 }
 Console.WriteLine($"{stackArray[0].Last()}{stackArray[1].Last()}{stackArray[2].Last()}{stackArray[3].Last()}{stackArray[4].Last()}{stackArray[5].Last()}{stackArray[6].Last()}{stackArray[7].Last()}{stackArray[8].Last()}");
