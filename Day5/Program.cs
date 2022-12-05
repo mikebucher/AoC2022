@@ -18,7 +18,7 @@ for (int i = 10; i < lines.Length; i++)
 
     int[] ints = { Convert.ToInt32(split[1]), Convert.ToInt32(split[3]), Convert.ToInt32(split[5]) };
 
-    for (int j = Convert.ToInt32(split[1]); j > 0; j--)
+    for (var j = ints[0]; j > 0; j--)
     {
         var toBeMoved = stackArray[ints[1]-1][stackArray[ints[1]-1].Length-j];
         stackArray[ints[2]-1] = stackArray[ints[2]-1].Append(toBeMoved).ToArray();
