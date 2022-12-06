@@ -2,25 +2,12 @@
 var input = lines[0];
 var found = false;
 
-for (int i = 0; i < input.Length-14; i++)
+for (var i = 0; i < input.Length-14; i++)
 {
-    List<char> lettersChecked = new List<char>
-    {
-        input[i],
-        input[i+1],
-        input[i+2],
-        input[i+3],
-        input[i+4],
-        input[i+5],
-        input[i+6],
-        input[i+7],
-        input[i+8],
-        input[i+9],
-        input[i+10],
-        input[i+11],
-        input[i+12],
-        input[i+13]
-    };
+    var lettersChecked = new List<char>();
+    for(var j=0; j<14; j++){
+        lettersChecked.Add(input[i+j]);
+    }
 
     var result = lettersChecked.Distinct();
 
