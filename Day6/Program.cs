@@ -13,7 +13,7 @@ for (var i = 0; i < input.Length-14; i++)
 
     if (result.Count() == 14 && !found)
     {
-        Console.WriteLine($"Part1: {i+14}");
+        Console.WriteLine($"Result: {i+14}");
         found = true;
     }
 }
