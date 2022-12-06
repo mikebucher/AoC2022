@@ -4,14 +4,12 @@ var found = false;
 
 for (var i = 0; i < input.Length-14; i++)
 {
-    var lettersChecked = new List<char>();
+    var lettersChecked = new HashSet<char>();
     for(var j=0; j<14; j++){
         lettersChecked.Add(input[i+j]);
     }
 
-    var result = lettersChecked.Distinct();
-
-    if (result.Count() == 14 && !found)
+    if (lettersChecked.Count() == 14 && !found)
     {
         Console.WriteLine($"Result: {i+14}");
         found = true;
