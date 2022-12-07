@@ -53,7 +53,9 @@ var result = directories.Where(kvp => kvp.Value <= 100000).Sum(kvp => kvp.Value)
 
 Console.WriteLine($"Part 1: {result}");
 
-var sortedDirectories = directories.OrderByDescending(x => x.Value).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+
+//Part2 starts here;
+var sortedDirectories = directories.OrderBy(x => x.Value).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
 
 var result2 = 0;
 var totalSpace = 70000000;
@@ -61,5 +63,6 @@ var neededSpace = 30000000;
 var currentAvailableSpace = totalSpace - directories["/"];
 var spaceNeededToBeFreedUp = neededSpace - currentAvailableSpace;
 
-//result is 7068748, how do I extract it?
+result2 = sortedDirectories.First(kvp => kvp.Value > spaceNeededToBeFreedUp).Value;
+
 Console.WriteLine($"Part 2: {result2}");
