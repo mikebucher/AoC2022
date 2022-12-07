@@ -15,6 +15,8 @@ foreach (var line in lines)
             {
                 case "/":
                     currentDirectoryPath.Clear();
+                    if(!directories.ContainsKey("/")) directories.Add("/", 0);
+                    currentDirectoryPath.AddLast("/");
                     break;
                 case "..":
                     currentDirectoryPath.RemoveLast();
@@ -50,3 +52,14 @@ foreach (var line in lines)
 var result = directories.Where(kvp => kvp.Value <= 100000).Sum(kvp => kvp.Value);
 
 Console.WriteLine($"Part 1: {result}");
+
+var sortedDirectories = directories.OrderByDescending(x => x.Value).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+
+var result2 = 0;
+var totalSpace = 70000000;
+var neededSpace = 30000000;
+var currentAvailableSpace = totalSpace - directories["/"];
+var spaceNeededToBeFreedUp = neededSpace - currentAvailableSpace;
+
+//result is 7068748, how do I extract it?
+Console.WriteLine($"Part 2: {result2}");
