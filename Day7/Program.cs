@@ -31,16 +31,22 @@ foreach (var line in lines)
     //directory
     else if (line.StartsWith("dir"))
     {
-        if(!directories.ContainsKey(commands[1])) directories.Add(commands[1], 0);
+        string directory = string.Join("", currentDirectoryPath) + commands[1];
+        if(!directories.ContainsKey(directory)) directories.Add(directory, 0);
     }
     //must be a file
     else
     {
         if (!alreadyCalculatedFolders.Contains(string.Join("", currentDirectoryPath)))
         {
-            foreach (var dir in currentDirectoryPath)
+            for (var i = 0; i < currentDirectoryPath.Count; i++)
             {
-                directories[dir] += Convert.ToInt32(commands[0]);
+                var folders = "";
+                for (var j = 0; j <= i; j++)
+                {
+                    folders += currentDirectoryPath.ElementAt(j);
+                }
+                directories[folders] += Convert.ToInt32(commands[0]);
             }
         }
     }
