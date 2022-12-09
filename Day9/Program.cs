@@ -1,4 +1,4 @@
-﻿var lines = File.ReadAllLines(@"../../../testInput.txt");
+﻿var lines = File.ReadAllLines(@"../../../input.txt");
 var visited = new HashSet<string>();
 visited.Add("0,0");
 var currentHeadX = 0;
@@ -96,14 +96,16 @@ void CheckIfPartNeedsToMove(int headX, int headY, ref int tailX, ref int tailY)
     //check diagonals
     //top right
     if ((headX - tailX > 1 && headY - tailY == 1) ||
-        (headX - tailX == 1 && headY - tailY > 1))
+        (headX - tailX == 1 && headY - tailY > 1 ) ||
+        (headX - tailX > 1 && headY - tailY > 1 ))
     {
         tailX++;
         tailY++;
     }
     //top left
     else if((headX - tailX < -1 && headY - tailY == 1) ||
-            (headX - tailX == -1 && headY - tailY > 1))
+            (headX - tailX == -1 && headY - tailY > 1) ||
+            (headX - tailX < -1 && headY - tailY > 1))
     {
         tailX--;
         tailY++;
@@ -111,7 +113,8 @@ void CheckIfPartNeedsToMove(int headX, int headY, ref int tailX, ref int tailY)
 
     //bottom right
     else if((headX - tailX > 1 && headY - tailY == -1) ||
-            (headX - tailX == 1 && headY - tailY < -1))
+            (headX - tailX == 1 && headY - tailY < -1) ||
+            (headX - tailX > 1 && headY - tailY < -1))
     {
         tailX++;
         tailY--;
@@ -119,7 +122,8 @@ void CheckIfPartNeedsToMove(int headX, int headY, ref int tailX, ref int tailY)
 
     //bottom left
     else if((headX - tailX < -1 && headY - tailY == -1) ||
-            (headX - tailX == -1 && headY - tailY < -1))
+            (headX - tailX == -1 && headY - tailY < -1) ||
+            (headX - tailX < -1 && headY - tailY < -1))
     {
         tailX--;
         tailY--;
@@ -156,7 +160,8 @@ void CheckIfTailNeedsToMove(int headX, int headY, int tailX, int tailY)
     //check diagonals
     //top right
     if ((headX - tailX > 1 && headY - tailY == 1) ||
-        (headX - tailX == 1 && headY - tailY > 1))
+        (headX - tailX == 1 && headY - tailY > 1) ||
+        (headX - tailX > 1 && headY - tailY > 1))
     {
         currentTailX++;
         currentTailY++;
@@ -164,7 +169,8 @@ void CheckIfTailNeedsToMove(int headX, int headY, int tailX, int tailY)
     }
     //top left
     else if((headX - tailX < -1 && headY - tailY == 1) ||
-            (headX - tailX == -1 && headY - tailY > 1))
+            (headX - tailX == -1 && headY - tailY > 1) ||
+            (headX - tailX < -1 && headY - tailY > 1))
     {
         currentTailX--;
         currentTailY++;
@@ -173,7 +179,8 @@ void CheckIfTailNeedsToMove(int headX, int headY, int tailX, int tailY)
 
     //bottom right
     else if((headX - tailX > 1 && headY - tailY == -1) ||
-            (headX - tailX == 1 && headY - tailY < -1))
+            (headX - tailX == 1 && headY - tailY < -1) ||
+            (headX - tailX > 1 && headY - tailY < -1))
     {
         currentTailX++;
         currentTailY--;
@@ -182,7 +189,8 @@ void CheckIfTailNeedsToMove(int headX, int headY, int tailX, int tailY)
 
     //bottom left
     else if((headX - tailX < -1 && headY - tailY == -1) ||
-            (headX - tailX == -1 && headY - tailY < -1))
+            (headX - tailX == -1 && headY - tailY < -1) ||
+            (headX - tailX < -1 && headY - tailY < -1))
     {
         currentTailX--;
         currentTailY--;
