@@ -2,14 +2,14 @@
 
 var lines = File.ReadAllLines(@"../../../input.txt");
 
-var monkey0 = new List<BigInteger>() {65, 58, 93, 57, 66};
-var monkey1 = new List<BigInteger>() {76, 97, 58, 72, 57, 92, 82};
-var monkey2 = new List<BigInteger>() {90, 89, 96};
-var monkey3 = new List<BigInteger>() {72, 63, 72, 99};
-var monkey4 = new List<BigInteger>() {65};
-var monkey5 = new List<BigInteger>() {97, 71};
-var monkey6 = new List<BigInteger>() {83, 68, 88, 55, 87, 67};
-var monkey7 = new List<BigInteger>() {64, 81, 50, 96, 82, 53, 62, 92};
+var monkey0 = new List<long>() {65, 58, 93, 57, 66};
+var monkey1 = new List<long>() {76, 97, 58, 72, 57, 92, 82};
+var monkey2 = new List<long>() {90, 89, 96};
+var monkey3 = new List<long>() {72, 63, 72, 99};
+var monkey4 = new List<long>() {65};
+var monkey5 = new List<long>() {97, 71};
+var monkey6 = new List<long>() {83, 68, 88, 55, 87, 67};
+var monkey7 = new List<long>() {64, 81, 50, 96, 82, 53, 62, 92};
 
 var count0 = 0;
 var count1 = 0;
@@ -30,7 +30,7 @@ for (int i = 0; i < 10000; i++)
         if(newworry % 19 == 0) monkey6.Add(newworry);
         else monkey4.Add(newworry);
     }
-    monkey0 = new List<BigInteger>();
+    monkey0 = new List<long>();
     foreach (var item in monkey1)
     {
         var newworry = item + 4;
@@ -38,7 +38,7 @@ for (int i = 0; i < 10000; i++)
         if(newworry % 3 == 0) monkey7.Add(newworry);
         else monkey5.Add(newworry);
     }
-    monkey1 = new List<BigInteger>();
+    monkey1 = new List<long>();
     foreach (var item in monkey2)
     {
         var newworry = item * 5;
@@ -47,7 +47,7 @@ for (int i = 0; i < 10000; i++)
         if(newworry % 13 == 0) monkey5.Add(newworry);
         else monkey1.Add(newworry);
     }
-    monkey2 = new List<BigInteger>();
+    monkey2 = new List<long>();
     foreach (var item in monkey3)
     {
         var newworry = item * item;
@@ -56,7 +56,7 @@ for (int i = 0; i < 10000; i++)
         if(newworry % 17 == 0) monkey0.Add(newworry);
         else monkey4.Add(newworry);
     }
-    monkey3 = new List<BigInteger>();
+    monkey3 = new List<long>();
     foreach (var item in monkey4)
     {
         var newworry = item + 1;
@@ -65,7 +65,7 @@ for (int i = 0; i < 10000; i++)
         if(newworry % 2 == 0) monkey6.Add(newworry);
         else monkey2.Add(newworry);
     }
-    monkey4 = new List<BigInteger>();
+    monkey4 = new List<long>();
     foreach (var item in monkey5)
     {
         var newworry = item + 8;
@@ -74,7 +74,7 @@ for (int i = 0; i < 10000; i++)
         if(newworry % 11 == 0) monkey7.Add(newworry);
         else monkey3.Add(newworry);
     }
-    monkey5 = new List<BigInteger>();
+    monkey5 = new List<long>();
     foreach (var item in monkey6)
     {
         var newworry = item + 2;
@@ -83,7 +83,7 @@ for (int i = 0; i < 10000; i++)
         if(newworry % 5 == 0) monkey2.Add(newworry);
         else monkey1.Add(newworry);
     }
-    monkey6 = new List<BigInteger>();
+    monkey6 = new List<long>();
     foreach (var item in monkey7)
     {
         var newworry = item + 5;
@@ -92,7 +92,7 @@ for (int i = 0; i < 10000; i++)
         if(newworry % 7 == 0) monkey3.Add(newworry);
         else monkey0.Add(newworry);
     }
-    monkey7 = new List<BigInteger>();
+    monkey7 = new List<long>();
 }
 
 Console.WriteLine($"{count0} {count1} {count2} {count3} {count4} {count5} {count6} {count7}  ");
